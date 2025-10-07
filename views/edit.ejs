@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">;
+        <title> edit  chat</title>
+    </head>
+    <body>
+      
+    
+<form method="POST" action="/chats/<%=chat._id%>?_method=PUT">
+    <p> chat id <%=chat._id%></p>
+    <p> this form is from <%=chat.from%> <br>to <%=chat.to%></p>
+    <p>
+        <input type="text" name="msg">
+    </p>
+    <button>submit</button>
+    </form>
+    
+</body>
+</html>
