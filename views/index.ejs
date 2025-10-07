@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        User data
+    </body>
+</html>
+<form method="GET" action="/chats/new">
+    <button>send new message</button>
+      </form>
+<% for(let chat of chatss){ %>
+    <p>from:<%= chat.from %> </p>
+     <P>to:  <%= chat.to %> </P>
+      <p>msg: <%= chat.msg  %> </p>
+      <p>created_at:<%= chat.created_at %> </p>
+     <form method="GET" action="/chats/<%= chat._id %>/edits"> <button>edit</button></form>
+     <form method="GET" action="/chats/<%= chat._id %>/delete"> <button>delete</button></form>
+     <hr>
+      
+    
+<%}%>
